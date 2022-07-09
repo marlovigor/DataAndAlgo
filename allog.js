@@ -41,8 +41,27 @@ reverseString = (str) =>{
 
 }
 
-console.log(reverseString("hello"));
+// console.log(reverseString("hello"));
 
 
+StringSplitter = (str) =>{
+    if(str.length === 0){
+        return "";
+    }
+    else{
+        return str[0] + StringSplitter(str.substr(1));
+    }
+}
+// console.log(StringSplitter("20/10/2020"));
 
+factorial = (num) =>{
+    if(num === 0){
+        return 1;
+    }
+    else{
+        return num * factorial(num - 1);
+    }
+}
+
+console.log(factorial(5));
 
