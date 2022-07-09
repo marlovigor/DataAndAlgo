@@ -28,8 +28,20 @@ powerCalculator = (base, exp) => {
     }
 }
 
-console.log(powerCalculator(10, 2));
+// console.log(powerCalculator(10, 2));
 
+
+reverseString = (str) =>{
+    if(str.length === 0){
+        return "";
+    }
+    else{
+        return reverseString(str.substr(1)) + str[0];
+    }
+
+}
+
+console.log(reverseString("hello"));
 
 
 
