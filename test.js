@@ -8,7 +8,10 @@ const removeElement = function(nums, val) {
     return nums   
 };
 
-console.log(removeElement([1,2, 3, 4,5,6,7],3))
+console.log(removeElement([1,2,3,4,3,5,6,7],3))
+console.log(removeElement([0,1,2,3,0,4,2],3))
+
+///make code faster
 
 
 
