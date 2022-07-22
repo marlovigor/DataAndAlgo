@@ -1,32 +1,109 @@
-const plusOne = function(digits) {
-    ///study this solution
-    let i = digits.length - 1;
-    let val = 0;
-    let carry = 1;
-    while (i >= 0 && carry) {
-      val = digits[i] + carry;
-      carry = Math.floor(val / 10);
-      digits[i] = val % 10;
-      i--;
-    }
-    if (carry) digits.unshift(carry);
-    return digits;
+
+const removeElement = function(nums, val) {
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i]==val){
+            nums.splice(i, 1);
+        }
+    } 
+    return nums   
+};
+
+console.log(removeElement([1,2, 3, 4,5,6,7],3))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const romanToInt = function(s) {
+
+//   let roman = {
+//       I: 1,
+//       V: 5,
+//       X: 10,
+//       L: 50,
+//       C: 100,
+//       D: 500,
+//       M: 1000
+//   }
+
+//   let result = 0;
+//   let prev = 0;
+//   for (let i = s.length - 1; i >= 0; i--) {
+//     // console.log(s[i]);
+//       let curr = roman[s[i]];
+//       console.log("curr: ",curr);
+//       if (curr < prev) {
+//           result -= curr;
+//           // console.log("result: ",result);
+//       } else {
+//           result += curr;
+//       }
+//       prev = curr;
+//       // console.log("prev: ",prev);
+//   }
+//   // console.log(result);
+//   return result;
+
+
+
+
+
+  
+  
+// };
+
+// romanToInt("CCMXCIV");
+
+// console.log("hi")
+
+
+
+
+// const plusOne = function(digits) {
+//     ///study this solution
+//     let i = digits.length - 1;
+//     let val = 0;
+//     let carry = 1;
+//     while (i >= 0 && carry) {
+//       val = digits[i] + carry;
+//       carry = Math.floor(val / 10);
+//       digits[i] = val % 10;
+//       i--;
+//     }
+//     if (carry) digits.unshift(carry);
+//     return digits;
 
 
 
     
-    // let num = [];
-    // for(let i = 0; i < digits.length; i++) {
-    //     // console.log(digits[i])
-    //     num.push(digits[i])
-    // }
-    // console.log("this is num: ",num.length - 0)
+//     // let num = [];
+//     // for(let i = 0; i < digits.length; i++) {
+//     //     // console.log(digits[i])
+//     //     num.push(digits[i])
+//     // }
+//     // console.log("this is num: ",num.length - 0)
 
-    //  return num
-}
+//     //  return num
+// }
 
 
-console.log(plusOne([1,2,4,5,6]))
+// console.log(plusOne([1,2,4,5,6]))
 
 
 
