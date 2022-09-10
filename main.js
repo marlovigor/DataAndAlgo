@@ -1,21 +1,56 @@
 
-sortedArray=(nums1,m,num2,n)=>{
-  let first = m-1;
-  let second = n-1;
-  let i = m+n -1;
-  console.log(i)
 
-  while(second >= 0){
-    let fval =nums1[first]
-    // console.log(fval)
+
+const containDups=(arr)=>{
+const newMem = {};
+
+  for(let i = 0; i < arr.length; i++){
+    if(newMem[arr[i]] === undefined){
+      console.log(arr[i])
+
+      newMem[arr[i]] ="dam"
+     }
+     else{
+      console.log("true")
+      return true
+     }
   }
+  console.log(false)
+
+  return false 
+  
 
 
 
 
-
+    
 }
 
+containDups([1,2,3,4,4,5,6,7])
+
+
+
+
+
+
+
+
+// sortedArray=(nums1,m,num2,n)=>{
+//   let first = m-1;
+//   let second = n-1;
+//   let i = m+n -1;
+//   console.log(i)
+
+//   while(second >= 0){
+//     let fval =nums1[first]
+//     // console.log(fval)
+//   }
+
+
+
+
+
+// }
 
 
 
@@ -26,7 +61,8 @@ sortedArray=(nums1,m,num2,n)=>{
 
 
 
- sortedArray([1,2,3,4],4,[5,6,7,8,9],5)
+
+//  sortedArray([1,2,3,4],4,[5,6,7,8,9],5)
 
 
 
