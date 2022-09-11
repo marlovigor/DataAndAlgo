@@ -25,7 +25,9 @@ class linkedList {
     const newNode = {
       value: value,
       next: null,
+      prev:null
     };
+    newNode.prev = this.tail
     this.tail.next = newNode;
     this.tail = newNode;
     this.length++;
@@ -36,8 +38,14 @@ class linkedList {
     const newNode = {
       value: value,
       next: null,
+      prev:null,
+      prev:null
+
+
     };
     newNode.next = this.head;
+    this.head.prec= newNode;
+    this.head = newNode;
     this.length++;
     return this;
   }
@@ -58,11 +66,16 @@ class linkedList {
     const newNode = {
       value: value,
       next: null,
+      prev:null,
+
+
     };
     const leader = this.traverseToIndex(index - 1);
-    const holdingPointer = leader.next;
+    const follower = leader.next;
     leader.next= newNode;
-    newNode.next = holdingPointer;
+    newNode.prev = leader
+    newNode.next = follower;
+    follower.prev= newNode
     this.length++
     return this.printList()
   }
@@ -75,6 +88,36 @@ class linkedList {
     }
     return currentNode;
   }
+
+  remove(index){
+    ///
+   const leader = this.traverseToIndex(index - 1);
+   const unwantedNode = leader.next;
+   leader.next =unwantedNode.next;
+   this.length--;
+   return this.printList()
+
+    
+
+  }
+
+  reverse(){
+    if(this.head.next){
+      return this.head;
+    }
+    let first = this.head;
+    this.tail = this.head;
+    let second = first.next;
+    while(second){
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this.head.nest = null;
+    this.head = first;
+    return this.printList()
+  }
 }
 
 const newLinkedList = new linkedList(10);
@@ -84,4 +127,10 @@ newLinkedList.prepend(1);
 newLinkedList.insert(2,20)
 newLinkedList.printList();
 // newLinkedList.append(10);
+// console.log(newLinkedList.printList());
+// console.log(newLinkedList.remove(2));
+// console.log(newLinkedList);
 console.log(newLinkedList.printList());
+console.log(newLinkedList.reverse());
+
+
