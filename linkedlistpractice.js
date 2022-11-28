@@ -7,6 +7,8 @@ class LinkedList {
       this.tail = this.head;
       this.length = 1;
     }
+
+    ////RE GO OVER EACH FUNCTION MARLO
     append(value) {
       const newNode = {
         value: value,
